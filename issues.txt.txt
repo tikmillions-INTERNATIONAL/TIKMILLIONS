@@ -1,0 +1,277 @@
+02:58:48.740 Running build in Portland, USA (West) – pdx1
+02:58:48.740 Build machine configuration: 2 cores, 8 GB
+02:58:48.850 Cloning github.com/tikmillions-INTERNATIONAL/studio (Branch: main, Commit: f360d6d)
+02:58:48.851 Previous build caches not available.
+02:58:49.426 Cloning completed: 576.000ms
+02:58:49.918 Running "vercel build"
+02:58:50.389 Vercel CLI 50.1.3
+02:58:50.783 Installing dependencies...
+02:58:53.631 npm warn ERESOLVE overriding peer dependency
+02:58:53.632 npm warn While resolving: nextn@0.1.0
+02:58:53.632 npm warn Found: @types/react@19.2.7
+02:58:53.633 npm warn node_modules/@types/react
+02:58:53.633 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.633 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.634 npm warn
+02:58:53.634 npm warn Could not resolve dependency:
+02:58:53.634 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.635 npm warn node_modules/@types/react-dom
+02:58:53.635 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.635 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.638 npm warn ERESOLVE overriding peer dependency
+02:58:53.638 npm warn While resolving: nextn@0.1.0
+02:58:53.639 npm warn Found: @types/react@19.2.7
+02:58:53.639 npm warn node_modules/@types/react
+02:58:53.639 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.639 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.639 npm warn
+02:58:53.640 npm warn Could not resolve dependency:
+02:58:53.640 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.640 npm warn node_modules/@types/react-dom
+02:58:53.640 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.640 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.642 npm warn ERESOLVE overriding peer dependency
+02:58:53.645 npm warn While resolving: nextn@0.1.0
+02:58:53.646 npm warn Found: @types/react@19.2.7
+02:58:53.646 npm warn node_modules/@types/react
+02:58:53.646 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.646 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.647 npm warn
+02:58:53.647 npm warn Could not resolve dependency:
+02:58:53.647 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.648 npm warn node_modules/@types/react-dom
+02:58:53.649 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.649 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.651 npm warn ERESOLVE overriding peer dependency
+02:58:53.651 npm warn While resolving: nextn@0.1.0
+02:58:53.652 npm warn Found: @types/react@19.2.7
+02:58:53.653 npm warn node_modules/@types/react
+02:58:53.653 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.653 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.653 npm warn
+02:58:53.654 npm warn Could not resolve dependency:
+02:58:53.654 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.654 npm warn node_modules/@types/react-dom
+02:58:53.654 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.654 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.655 npm warn ERESOLVE overriding peer dependency
+02:58:53.657 npm warn While resolving: nextn@0.1.0
+02:58:53.657 npm warn Found: @types/react@19.2.7
+02:58:53.657 npm warn node_modules/@types/react
+02:58:53.658 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.658 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.658 npm warn
+02:58:53.658 npm warn Could not resolve dependency:
+02:58:53.658 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.659 npm warn node_modules/@types/react-dom
+02:58:53.659 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.659 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.659 npm warn ERESOLVE overriding peer dependency
+02:58:53.659 npm warn While resolving: nextn@0.1.0
+02:58:53.660 npm warn Found: @types/react@19.2.7
+02:58:53.660 npm warn node_modules/@types/react
+02:58:53.660 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.660 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.660 npm warn
+02:58:53.661 npm warn Could not resolve dependency:
+02:58:53.661 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.661 npm warn node_modules/@types/react-dom
+02:58:53.661 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.661 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.667 npm warn ERESOLVE overriding peer dependency
+02:58:53.668 npm warn While resolving: nextn@0.1.0
+02:58:53.668 npm warn Found: @types/react@19.2.7
+02:58:53.668 npm warn node_modules/@types/react
+02:58:53.669 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.669 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.669 npm warn
+02:58:53.669 npm warn Could not resolve dependency:
+02:58:53.669 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.669 npm warn node_modules/@types/react-dom
+02:58:53.669 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.669 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.673 npm warn ERESOLVE overriding peer dependency
+02:58:53.673 npm warn While resolving: nextn@0.1.0
+02:58:53.673 npm warn Found: @types/react@19.2.7
+02:58:53.673 npm warn node_modules/@types/react
+02:58:53.674 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.674 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.674 npm warn
+02:58:53.674 npm warn Could not resolve dependency:
+02:58:53.674 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.674 npm warn node_modules/@types/react-dom
+02:58:53.674 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.674 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.677 npm warn ERESOLVE overriding peer dependency
+02:58:53.680 npm warn While resolving: nextn@0.1.0
+02:58:53.680 npm warn Found: @types/react@19.2.7
+02:58:53.681 npm warn node_modules/@types/react
+02:58:53.681 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.681 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.681 npm warn
+02:58:53.681 npm warn Could not resolve dependency:
+02:58:53.681 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.682 npm warn node_modules/@types/react-dom
+02:58:53.682 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.682 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.684 npm warn ERESOLVE overriding peer dependency
+02:58:53.684 npm warn While resolving: nextn@0.1.0
+02:58:53.684 npm warn Found: @types/react@19.2.7
+02:58:53.685 npm warn node_modules/@types/react
+02:58:53.685 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.685 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.685 npm warn
+02:58:53.685 npm warn Could not resolve dependency:
+02:58:53.685 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.685 npm warn node_modules/@types/react-dom
+02:58:53.686 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.686 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.690 npm warn ERESOLVE overriding peer dependency
+02:58:53.691 npm warn While resolving: nextn@0.1.0
+02:58:53.691 npm warn Found: @types/react@19.2.7
+02:58:53.691 npm warn node_modules/@types/react
+02:58:53.691 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.691 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.692 npm warn
+02:58:53.692 npm warn Could not resolve dependency:
+02:58:53.692 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.692 npm warn node_modules/@types/react-dom
+02:58:53.692 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.692 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.694 npm warn ERESOLVE overriding peer dependency
+02:58:53.695 npm warn While resolving: nextn@0.1.0
+02:58:53.695 npm warn Found: @types/react@19.2.7
+02:58:53.695 npm warn node_modules/@types/react
+02:58:53.696 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.696 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.696 npm warn
+02:58:53.696 npm warn Could not resolve dependency:
+02:58:53.696 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.696 npm warn node_modules/@types/react-dom
+02:58:53.697 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.697 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.699 npm warn ERESOLVE overriding peer dependency
+02:58:53.699 npm warn While resolving: nextn@0.1.0
+02:58:53.699 npm warn Found: @types/react@19.2.7
+02:58:53.700 npm warn node_modules/@types/react
+02:58:53.700 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.700 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.700 npm warn
+02:58:53.700 npm warn Could not resolve dependency:
+02:58:53.700 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.701 npm warn node_modules/@types/react-dom
+02:58:53.701 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.701 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.703 npm warn ERESOLVE overriding peer dependency
+02:58:53.704 npm warn While resolving: nextn@0.1.0
+02:58:53.704 npm warn Found: @types/react@19.2.7
+02:58:53.704 npm warn node_modules/@types/react
+02:58:53.704 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.705 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.705 npm warn
+02:58:53.705 npm warn Could not resolve dependency:
+02:58:53.705 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.705 npm warn node_modules/@types/react-dom
+02:58:53.706 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.706 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.708 npm warn ERESOLVE overriding peer dependency
+02:58:53.708 npm warn While resolving: nextn@0.1.0
+02:58:53.709 npm warn Found: @types/react@19.2.7
+02:58:53.709 npm warn node_modules/@types/react
+02:58:53.709 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.709 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.709 npm warn
+02:58:53.709 npm warn Could not resolve dependency:
+02:58:53.710 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.710 npm warn node_modules/@types/react-dom
+02:58:53.710 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.710 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.712 npm warn ERESOLVE overriding peer dependency
+02:58:53.713 npm warn While resolving: nextn@0.1.0
+02:58:53.713 npm warn Found: @types/react@19.2.7
+02:58:53.713 npm warn node_modules/@types/react
+02:58:53.713 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.713 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.714 npm warn
+02:58:53.714 npm warn Could not resolve dependency:
+02:58:53.714 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.714 npm warn node_modules/@types/react-dom
+02:58:53.714 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.714 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.716 npm warn ERESOLVE overriding peer dependency
+02:58:53.718 npm warn While resolving: nextn@0.1.0
+02:58:53.718 npm warn Found: @types/react@19.2.7
+02:58:53.718 npm warn node_modules/@types/react
+02:58:53.718 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.718 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.719 npm warn
+02:58:53.719 npm warn Could not resolve dependency:
+02:58:53.719 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.719 npm warn node_modules/@types/react-dom
+02:58:53.719 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.719 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.722 npm warn ERESOLVE overriding peer dependency
+02:58:53.723 npm warn While resolving: nextn@0.1.0
+02:58:53.723 npm warn Found: @types/react@19.2.7
+02:58:53.723 npm warn node_modules/@types/react
+02:58:53.723 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.724 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.724 npm warn
+02:58:53.724 npm warn Could not resolve dependency:
+02:58:53.724 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.724 npm warn node_modules/@types/react-dom
+02:58:53.724 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.725 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.728 npm warn ERESOLVE overriding peer dependency
+02:58:53.729 npm warn While resolving: nextn@0.1.0
+02:58:53.729 npm warn Found: @types/react@19.2.7
+02:58:53.729 npm warn node_modules/@types/react
+02:58:53.729 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.730 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.730 npm warn
+02:58:53.730 npm warn Could not resolve dependency:
+02:58:53.730 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.730 npm warn node_modules/@types/react-dom
+02:58:53.730 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.731 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.732 npm warn ERESOLVE overriding peer dependency
+02:58:53.733 npm warn While resolving: nextn@0.1.0
+02:58:53.733 npm warn Found: @types/react@19.2.7
+02:58:53.734 npm warn node_modules/@types/react
+02:58:53.734 npm warn   dev @types/react@"^18.3.3" from the root project
+02:58:53.734 npm warn   108 more (@radix-ui/react-accordion, ...)
+02:58:53.734 npm warn
+02:58:53.734 npm warn Could not resolve dependency:
+02:58:53.734 npm warn peer @types/react@"^19.2.0" from @types/react-dom@19.2.3
+02:58:53.735 npm warn node_modules/@types/react-dom
+02:58:53.735 npm warn   dev @types/react-dom@"^18.3.0" from the root project
+02:58:53.735 npm warn   56 more (@radix-ui/react-accordion, ...)
+02:58:53.819 npm error code ERESOLVE
+02:58:53.819 npm error ERESOLVE could not resolve
+02:58:53.820 npm error
+02:58:53.821 npm error While resolving: nextn@0.1.0
+02:58:53.821 npm error Found: next@15.5.9
+02:58:53.821 npm error node_modules/next
+02:58:53.821 npm error   next@"14.2.5" from the root project
+02:58:53.822 npm error   peer next@"^15.0.0" from @genkit-ai/next@1.20.0
+02:58:53.822 npm error   node_modules/@genkit-ai/next
+02:58:53.822 npm error     @genkit-ai/next@"^1.20.0" from the root project
+02:58:53.822 npm error
+02:58:53.822 npm error Could not resolve dependency:
+02:58:53.823 npm error next@"14.2.5" from the root project
+02:58:53.823 npm error
+02:58:53.823 npm error Conflicting peer dependency: react@18.3.1
+02:58:53.823 npm error node_modules/react
+02:58:53.823 npm error   peer react@"^18.2.0" from next@14.2.5
+02:58:53.823 npm error   node_modules/next
+02:58:53.824 npm error     next@"14.2.5" from the root project
+02:58:53.824 npm error
+02:58:53.824 npm error Fix the upstream dependency conflict, or retry
+02:58:53.824 npm error this command with --force or --legacy-peer-deps
+02:58:53.824 npm error to accept an incorrect (and potentially broken) dependency resolution.
+02:58:53.825 npm error
+02:58:53.825 npm error
+02:58:53.825 npm error For a full report see:
+02:58:53.825 npm error /vercel/.npm/_logs/2026-01-04T01_58_50_982Z-eresolve-report.txt
+02:58:53.825 npm error A complete log of this run can be found in: /vercel/.npm/_logs/2026-01-04T01_58_50_982Z-debug-0.log
+02:58:53.862 Error: Command "npm install" exited with 1

@@ -1,0 +1,173 @@
+/**
+ * Core Philosophy: This ruleset establishes a clear separation between public
+ * read-only data, private user-owned data, and a public-write collection
+ * for email subscriptions. The primary goal is to ensure that users can only
+ * access and manage their own information while allowing anonymous users to
+ * browse public content and subscribe to newsletters.
+ *
+ * Data Structure:
+ * - /products/{productId}: Publicly readable product catalog.
+ * - /categories/{categoryId}: Publicly readable product categories.
+ * - /subscriptions/{subscriptionId}: Public collection where anyone can write
+ *   (create) a new subscription, but no one can read or modify existing entries.
+ * - /users/{userId}: Root document for a user's private data.
+ * - /users/{userId}/orders/{orderId}: A user's private order history.
+ *
+ * Key Security Decisions:
+ * - Strict Ownership: All data under the /users/{userId} path is strictly
+ *   controlled by the user whose UID matches {userId}.
+ * - User Privacy: Listing users is disabled to prevent user enumeration.
+ *   Similarly, listing or reading individual email subscriptions is disabled
+ *   to protect subscriber privacy.
+ * - Write Protection on Public Data: The /products and /categories
+ *   collections are read-only for all users. Write access is currently
+ *   disabled as no admin role or ownership model is defined for them.
+ *   This is the most secure default posture.
+ * - Public Submissions: The /subscriptions collection is intentionally left
+ *   open for creation to allow anyone, including non-authenticated users,
+ *   to subscribe via a public-facing form.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ------------------------------------------------------------------------
+    // Helper Functions
+    // ------------------------------------------------------------------------
+
+    /**
+     * Checks if the user is authenticated.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * Checks if the authenticated user's UID matches the provided userId.
+     * This is the foundation of the user ownership model.
+     */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    /**
+     * Confirms ownership for an existing document. Used for safe updates/deletes.
+     * Ensures an operation can't target a non-existent document.
+     */
+    function isExistingOwner(userId) {
+      return isOwner(userId) && resource != null;
+    }
+
+    // ------------------------------------------------------------------------
+    // Public Read-Only Collections
+    // ------------------------------------------------------------------------
+
+    /**
+     * @description Publicly readable catalog of products. Writes are disabled.
+     * @path        /products/{productId}
+     * @allow       Anyone, including unauthenticated users, can (get) or (list) products.
+     * @deny        Any user attempting to (create), (update), or (delete) a product.
+     * @principle   Public read access for catalog data. Writes are locked down
+     *              pending implementation of an admin role or ownership model.
+     */
+    match /products/{productId} {
+      allow get: if true;
+      allow list: if true;
+      // CRITICAL: Cannot implement owner-only or admin writes. The 'Product' entity is missing an 'ownerId' or an admin role system is not defined.
+      allow create: if false; // TODO: Add admin validation once an admin role system is implemented.
+      allow update: if false; // TODO: Add admin validation once an admin role system is implemented.
+      allow delete: if false; // TODO: Add admin validation once an admin role system is implemented.
+    }
+
+    /**
+     * @description Publicly readable list of product categories. Writes are disabled.
+     * @path        /categories/{categoryId}
+     * @allow       Anyone, including unauthenticated users, can (get) or (list) categories.
+     * @deny        Any user attempting to (create), (update), or (delete) a category.
+     * @principle   Public read access for catalog data. Writes are locked down
+     *              pending implementation of an admin role or ownership model.
+     */
+    match /categories/{categoryId} {
+      allow get: if true;
+      allow list: if true;
+      // CRITICAL: Cannot implement owner-only or admin writes. The 'Category' entity is missing an 'ownerId' or an admin role system is not defined.
+      allow create: if false; // TODO: Add admin validation once an admin role system is implemented.
+      allow update: if false; // TODO: Add admin validation once an admin role system is implemented.
+      allow delete: if false; // TODO: Add admin validation once an admin role system is implemented.
+    }
+
+    /**
+     * @description Stores email subscriptions. Anyone can create, no one can read.
+     * @path        /subscriptions/{subscriptionId}
+     * @allow       An anonymous user can (create) a subscription document.
+     * @deny        Any user attempting to (get), (list), (update) or (delete) a subscription.
+     * @principle   Protects subscriber privacy by making the collection write-only
+     *              for the public. Data is intended to be read by backend services.
+     */
+    match /subscriptions/{subscriptionId} {
+      allow get: if false;
+      allow list: if false;
+      allow create: if true;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    // ------------------------------------------------------------------------
+    // User-Specific Private Data
+    // ------------------------------------------------------------------------
+
+    /**
+     * @description A user's own profile document.
+     * @path        /users/{userId}
+     * @allow       A user (auth.uid=='user123') can (create) or (get) their own
+     *              profile at /users/user123.
+     * @deny        A user (auth.uid=='user123') trying to (get) /users/user456.
+     *              Listing all users is also denied to prevent enumeration.
+     * @principle   Enforces self-creation and ownership of a user's root document.
+     *              Validates that the document's internal `id` matches the path `userId`.
+     */
+    match /users/{userId} {
+      allow get: if isOwner(userId);
+      allow list: if false;
+      allow create: if isOwner(userId) && request.resource.data.id == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
+      allow delete: if isExistingOwner(userId);
+
+      /**
+       * @description A user's private collection of orders.
+       * @path        /users/{userId}/orders/{orderId}
+       * @allow       A user (auth.uid=='user123') can (create), (get), or (list)
+       *              their own orders under /users/user123/orders.
+       * @deny        A user (auth.uid=='user123') trying to access anything
+       *              under /users/user456/orders.
+       * @principle   Restricts access to a user's own data tree based on the path.
+       *              Validates that new orders contain a `userId` matching the owner.
+       */
+      match /orders/{orderId} {
+        allow get: if isOwner(userId);
+        allow list: if isOwner(userId);
+        allow create: if isOwner(userId) && request.resource.data.userId == userId;
+        allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
+        allow delete: if isExistingOwner(userId);
+
+        /**
+         * @description The items within a specific user's order.
+         * @path        /users/{userId}/orders/{orderId}/orderItems/{orderItemId}
+         * @allow       A user (auth.uid=='user123') can read or write items
+         *              within their own order.
+         * @deny        A user (auth.uid=='user456') trying to read items from an
+         *              order belonging to 'user123'.
+         * @principle   Inherits ownership from the parent path. Validates relational
+         *              integrity between the OrderItem and its parent Order.
+         */
+        match /orderItems/{orderItemId} {
+          allow get: if isOwner(userId);
+          allow list: if isOwner(userId);
+          allow create: if isOwner(userId) && request.resource.data.orderId == orderId;
+          allow update: if isExistingOwner(userId) && request.resource.data.orderId == resource.data.orderId;
+          allow delete: if isExistingOwner(userId);
+        }
+      }
+    }
+  }
+}
